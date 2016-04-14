@@ -1,0 +1,45 @@
+﻿{
+    "name": "Image Flipper",
+    "version": "0.0.1",
+    "default_locale": "en",
+    "author": "Aaron Powell",
+
+    "description": "Flips images on the page",
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon148.png"
+    },
+
+    "page_action": {
+        "default_icon": {
+            "20": "assets/iconpassive20.png",
+            "25": "assets/iconpassive25.png",
+            "30": "assets/iconpassive30.png",
+            "40": "assets/iconpassive40.png"
+        },
+        "default_title": "Flip Image"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>",
+        "webNavigation"
+    ],
+
+    "background": {
+        "persistent": true,
+        "page": "Background.html"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": ["content.js"]
+    }],
+
+    "minimum_edge_version": "37.14316.1000.0"
+}

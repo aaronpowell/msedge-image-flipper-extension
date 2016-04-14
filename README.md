@@ -1,0 +1,1 @@
+This is a prototype extension for MS Edge which aims to flip images on a page.
